@@ -196,9 +196,11 @@ Se reinicia, booteo desde el pendrive del ordenador
 
 Ahorita reinicio y si puedo entrar, como no instalé ninguna interfaz gráfica ni la de debian mismo entonces solo aparece una terminal (no hay ninguna interfaz gráfica). La terminal que aparece dice: 
 
-`Debian/Linux 12 netinst tty1`
+```
+Debian/Linux 12 netinst tty1`
 
-`netinst login: _`
+netinst login: _
+```
 
 allí poner el nombre de usuario, y luego dice: 
 
@@ -206,21 +208,29 @@ password:
 
 Ponga la contraseña de ese usuario y de Enter y aparece en mi caso: 
 
-`wachin@netinst:^$`
+```
+wachin@netinst:^$
+```
 
 ahora debemos escribir:
 
-`s
+```
+su
+``
 
 y poner la contraseña de superusuario (root) 
 
 ahora me aparece así: 
 
-`root@netinst:/home/wachin#`
+```
+root@netinst:/home/wachin#
+```
 
 y allí poner:
 
-`apt update`
+```
+apt update
+```
 
 **11H10**
 
@@ -248,15 +258,21 @@ memtest86+
 # Generar los locales e instalar el Administrador de inicio de sesión
 Si usted desea usar más de un idioma en su sistema operativo y que este esté disponible en el administrador de inicio de sesión (Login Manager) debe configurarlo poniendo en la terminal (como usario root): 
 
-`dpkg-reconfigure locales`
+```
+dpkg-reconfigure locales
+```
 
 seleccione de la lista los que desea usar, en mi caso yo solo necesito además del español el inglés y lo selecciono y con TAB me ubico en Aceptar y doy Enter. A continuación elijo el idioma por defecto, en mi caso:
 
-`es_EC.UTF-8`
+```
+es_EC.UTF-8
+```
 
 luego instalo el Login Manager, yo usaré lxdm:
 
-`apt install lxdm`
+```
+apt install lxdm
+```
 
 >**Nota**: También se puede usar lightdm (MX Linux lo usa con lightdm-gtk-greeter)
 
@@ -265,7 +281,9 @@ al seguir este orden así, al reiniciar estarán disponibles los idiomas que hay
 # CONTROLADORES DEL TOUCHPAD DE LAPTOP DELL
 El controlador del touchpad para Dell Inspiron 1750. En mi laptop Dell Inspiron 1750 no funciona el doble clic del touchpad en Debian 12 con el paquete:
 
-`xserver-xorg-input-synaptics`
+```
+xserver-xorg-input-synaptics
+```
 
 pero puedo instalarlo de todos modos, y ya lo arreglo después pues he hecho una solución en:
 
@@ -287,14 +305,18 @@ También sospecho que estos paquetes me hacía falta instalar para que funcione 
 # INSTALO PAQUETES dbus (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
 De la lista me faltaban por instalar:
 
-`dbus-x11 xdg-dbus-proxy`
+```
+dbus-x11 xdg-dbus-proxy
+```
 
 son importantes para el sistema, para la comunicación de aplicaciones entre si y el sistema operativo.
 
 
 # LAS SIGUIENTES ES POSIBLE QUE YA SE HAYAN INSTALADO
 
-`sudo apt install base-passwd passwd dmsetup`
+```
+sudo apt install base-passwd passwd dmsetup
+```
 
 sirven para la gestión de usuarios y sus contraseñas
 
@@ -375,13 +397,13 @@ usermod -aG sudo wachin
 ```
 porque mi usuario es "wachin" (en su usuario debe ser otro)
 
-reiniciar
+**reiniciar**
 
 y reinicio
 
 Ejecutar la herramientas del sistema: 
 
-xdg-user-dirs-update
+`xdg-user-dirs-update`
 
 eso es para que aparezcan las carpetas: Descargas, Música, Video y otras
 
