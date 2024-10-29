@@ -11,7 +11,7 @@ https://www.debian.org/releases/bookworm/debian-installer/
 ## Ventoy para Bootear Debian
 Después de descargada la ISO la puse en un pendrive en Ventoy, vea el siguiente tutorial: 
 
-**Creando pendrive USB Multiboot con Ventoy desde Linux**
+**Creando pendrive USB Multiboot con Ventoy desde Linux**  
 https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html
 
 luego encendí el ordenador y lo arranqué desde el USB (que yo ya lo tenía preconfigurado para eso), y lo conecté al cable de red para que en el proceso de instalación se descarguen más rápido los paquetes
@@ -287,7 +287,7 @@ xserver-xorg-input-synaptics
 
 pero puedo instalarlo de todos modos, y ya lo arreglo después pues he hecho una solución en:
 
-**No funciona doble clic en Touchpad Dell Inspiron 1750 en Debian 12**
+**No funciona doble clic en Touchpad Dell Inspiron 1750 en Debian 12**  
 https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html
 
 
@@ -487,6 +487,9 @@ gvfs-common
 gvfs-daemons  
 gvfs-libs
 
-porque solo voy a usar Dolphin como administrador de archivos
+porque solo voy a usar Dolphin como administrador de archivos:
+
+**Instalar correctamente Dolphin (Administrador de archivos) en MX Linux, antiX basados en Debian en entornos no KDE (tal vez basados en Ubuntu también)**  
+https://facilitarelsoftwarelibre.blogspot.com/2019/11/instalar-correctamente-dolphin-en-entornos-no-kde.html
 
 Dios los bendiga
