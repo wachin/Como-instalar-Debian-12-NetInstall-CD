@@ -1,66 +1,78 @@
 # Cómo instalar Debian NetInstall CD
 
-Diríjase a la siguiente dirección donde en el 2024 está Debian 12 Netinstall CD
+Diríjase a la siguiente dirección donde en el 2024 está Debian 12 bookworm y allí busque Netinstall CD
 
 https://www.debian.org/CD/netinst/
 
-y descargue la versión que necesite
+Como este tutorial está hecho con la versión Debian 12 bookworm alternativamente puede entrar en (y buscar Netinstall CD: 
 
-La puse en un pendrive en Ventoy (https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html?m=1)
+https://www.debian.org/releases/bookworm/debian-installer/
 
-Encendí el ordenador y lo arranqué desde el USB (ya está preconfigurado para eso), y lo conecté al cable de red para que se descarguen más rápido los paquetes
+## Ventoy para Bootear Debian
+Después de descargada la ISO la puse en un pendrive en Ventoy, vea el siguiente tutorial: 
+
+**Creando pendrive USB Multiboot con Ventoy desde Linux**
+https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html
+
+luego encendí el ordenador y lo arranqué desde el USB (que yo ya lo tenía preconfigurado para eso), y lo conecté al cable de red para que en el proceso de instalación se descarguen más rápido los paquetes
 
 Al aparecer el Grub de Ventoy elegir la 1er opción:
 
-Graphical Install
+**Graphical Install**
 
-Nota: No demorarse mucho porque sino se ejecuta el modo de instalación desde la terminal.
+>**Nota**: No demorarse mucho porque sino se ejecuta el modo de instalación desde la terminal.
 
 Ahora, clic en:
 
-Select language: 
+**Select language:**
 
-Spanish - Español
+**Spanish - Español**
 
 En país pongo mi país Ecuador
 
-En teclado, explico, yo no tengo un teclado "Latinoamericano", donde vivo en Ecuador núnca he visto que vendan en ninguna tienda, sino solo teclados en Español, asi que así elijo uno para que coincidan los dibujos de los elementos del teclado
+En teclado, explico, yo no tengo un teclado "Latinoamericano". Donde vivo en Ecuador núnca he visto que vendan en ninguna tienda, sino solo teclados en Español, asi que así elijo uno para que coincidan los dibujos de los elementos del teclado con el carácter que se obtendrá al presionar una tecla 
 
 Durante la instalación me pregunta si me conecto desde el Wi-Fi o desde el cable de Red
 
-Nota: Le tomo una foto con el celular ya que me muestra el nombre de los dispositivos xq puede que me sirva después.
+>**Nota**: Tomele una foto con el celular ya que muestra el nombre de los dispositivos y puede que sirva después.
 
 y le pongo que me conectaré desde el cable de red pues es más rapido.
 
-En:
+Luego en:
 
-Configurar la red 
+**Configurar la red**
 
 Me pregunta qué pongo en el nombre de la máquina, cambio el que tiene (dice debian) por: netinst (bueno, puede ser otro nombre).
 
 El nombre de dominio me lo invento así como dice allí (le pongo hogar)
 
-En:
+Después en:
 
-Configurar usuarios y contraseñas
+**Configurar usuarios y contraseñas**
 
 pongo una contraseña para el superusuario (root)
 
 Luego me pide mi nombre completo, lo pongo
 
-Luego nombre de usuario y contraseña (o sea la contraseña del usuario no la de root. Cada usuario debe tener su propia contraseña)
+Luego:
 
-Luego la zona horaria 
+**Nombre de usuario y contraseña**
+
+o sea la contraseña del usuario normal, no la de root. Cada usuario debe tener su propia contraseña
+
+Luego la 
+
+**Zona horaria**
 
 Y en:
 
-Particionado e discos
+**Particionado e discos**
 
 Le pongo:
 
-Guiado - utilizar todo el disco
+**Guiado - utilizar todo el disco**
 
-Y "Elijo el disco a particionar"
+Y Elijo el disco a particionar
 
 Usted puede elegir el Disco de su ordenador, yo elegiré mi Pendrive
 
