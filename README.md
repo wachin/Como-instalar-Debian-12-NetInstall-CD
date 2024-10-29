@@ -410,12 +410,9 @@ Ejecutar la herramientas del sistema:
 eso es para que aparezcan las carpetas: Descargas, Música, Video y otras
 
 
-y me pongo a leer y encuentro:
+# OTRAS APLICACIONES
 
-
-OTRAS APLICACIONES:
-
-Faltan por instalar algunas cosas. En synaptic al marcar para instalar:
+Faltan por instalar algunas cosas del sistema, en synaptic marcar para instalar:
 
 cups
 colord
@@ -424,65 +421,72 @@ ktimer
 lynx
 print-manager
 sane-utils
-sane-airscan
 sweeper
-kgpg
 kcharselect
 ipp-usb
 
 
-DEPENDENCIAS PARA OTROS KERNEL 
+# DEPENDENCIAS PARA OTROS KERNEL 
 Para instalar otros kernel:
+```
+sudo apt install gcc dkms
+```
+Ejemplo yo he compilado unos Kernel personalizados y es necesario estos paquetes para poderlos instalar.
 
-gcc dkms
 
-Herramienta para instalar parquete deb
+# CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
+Para instalar el controlador del Wi-Fi para esta laptop Dell Inspiron 1750 que tiene un controlador privativo sigo las siguientes instrucciones:
 
-4.19 en que yo hice
-
-5.10 de antiX
-
-Pero dkms me instaló algunas cosas, y también gcc
-
-CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
-Sigo las siguientes instrucciones:
-
-Cómo instalar el controlador del Wi-Fi en Debian 11, 12 KDE (ejemplo para mi Laptop Dell Inspiron 1750)
+**Cómo instalar el controlador del Wi-Fi en Debian 11, 12 KDE (ejemplo para mi Laptop Dell Inspiron 1750)**  
 https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html
 
-para mí laptop instalo pues es un broadcom:
+para mí laptop instalo broadcom:
 
 firmware-b43-installer
 
-Cierto sesión y vuelvo a entrar y ya funciona
+Cierro sesión y vuelvo a entrar y ya funciona
 
 
-CÓMO ARREGLAR EL TOUCHPAD DE MI LAPTOP DELL INSPIRON EN DEBIAN 12
+# CÓMO ARREGLAR EL TOUCHPAD DE MI LAPTOP DELL INSPIRON EN DEBIAN 12
 Sigo estas  instrucciones:
 
-No funciona el Touchpad de mi laptop Dell Inspiron 1750 en Q4OS 4 Gemini
+**No funciona el Touchpad de mi laptop Dell Inspiron 1750 en Q4OS 4 Gemini**  
 https://facilitarelsoftwarelibre.blogspot.com/2023/11/blog-post_12.html
 
 
+# PROGRAMAS DE PYTHON
+Para que funcionen algunos programas de python pueden instalarse los siguientes paquetes:
 
-PROGRAMAS DE PYTHON
-Para que funcionen algunos programas de python pueden instalarse:
+```
+sudo apt install python3-brotli python3-bs4 \
+    python3-cairo python3-certifi python3-chardet \
+    python3-cups python3-cupshelpers python3-dbus \
+    python3-distro python3-gi python3-html5lib \
+    python3-lxml python3-mutagen python3-packaging \
+    python3-ply python3-pycryptodome python3-pyqt5 \
+    python3-pyqt5.sip python3-pyxattr python3-sip \
+    python3-sipbuild python3-six python3-smbc \
+    python3-soupsieve python3-toml \
+    python3-webencodings python3-websockets \
+    python3-xdg
+```
 
-sudo apt install python3-brotli python3-bs4 python3-cairo python3-certifi python3-chardet python3-cups python3-cupshelpers python3-dbus python3-distro python3-gi python3-html5lib python3-lxml python3-mutagen python3-packaging python3-ply python3-pycryptodome python3-pyqt5 python3-pyqt5.sip python3-pyxattr python3-sip python3-sipbuild python3-six python3-smbc python3-soupsieve python3-toml python3-webencodings python3-websockets python3-xdg
-
-
-
-
-PROGRAMAS NO USADOS EN ESTÁ INSTALACIÓN
-No creo necesidad de instalar lo siguiente:
+# PROGRAMAS NO USADOS EN ESTÁ INSTALACIÓN
+No creo tener la necesidad de instalar lo siguiente:
 
 xdg-document-portal
 xdg-desktop-portal-gtk
 xdg-dbus-proxy
 
+pero no descarto instalarlos después si los necesite.
+
 Los siguientes paquetes no son necesarios:
 
-sudo apt install gvfs gvfs-common gvfs-daemons gvfs-libs
+gvfs  
+gvfs-common  
+gvfs-daemons  
+gvfs-libs
 
+porque solo voy a usar Dolphin como administrador de archivos
 
 Dios los bendiga
