@@ -16,6 +16,8 @@ https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multi
 
 luego encendí el ordenador y lo arranqué desde el USB (que yo ya lo tenía preconfigurado para eso), y lo conecté al cable de red para que en el proceso de instalación se descarguen más rápido los paquetes
 
+# Al iniciar el instalador elegir Graphical Install
+
 Al aparecer el Grub de Ventoy elegir la 1er opción:
 
 **Graphical Install**
@@ -74,53 +76,53 @@ Le pongo:
 
 Y Elijo el disco a particionar
 
-Usted puede elegir el Disco de su ordenador, yo elegiré mi Pendrive
+Usted puede elegir el Disco de su ordenador, yo elegiré mi Pendrive pues lo voy a instalar allí para usarlo en varios ordenadores
 
 Siguiente, elijo: 
 
-Todos los ficheros en una partición (recomendado para novatos) 
+**Todos los ficheros en una partición (recomendado para novatos)**
 
 y siguiente, y aparecen muchas opiniones de las particiones, y abajo abajo al final dice: 
 
-"Finalizar el particionado y escribir los cambios al disco"
+**"Finalizar el particionado y escribir los cambios al disco"**
 
 Continuar
 
 Me pregunta: 
 
-"Se escribirán en los discos todos los cambios . . . "
+**"Se escribirán en los discos todos los cambios . . . "**
 
-"Desea escribir . . . "
+**"Desea escribir . . . "**
 
 debo ver bien en cuál unidad lo estoy instalando, pues como lo estoy instalando en un pendrive veo que es: 
 
 /dev/sdc
 
-Nota: Ese sdc puede variar.
+>**Nota**: Ese sdc puede variar.
 
 eso lo necesito saber para el final cuando pide instalar el grub, así que lo anoto en un papel
 
-Marco que si
+Marco que "si"
 
 Y continuo
 
 Y dice: 
 
-"Instanlado el sistema base"
+**Instanlado el sistema base**
 
- A las 10H05
+A las **10H05** empieza la instalación
 
 Durante la instalación siempre hay que estar pendiente pues pregunta varias cosas y si uno no está para darle siguiente pues nunca se instala
 
-10H23
+**10H23**
 
-"Configurar Gestor de Paquetes"
+**Configurar Gestor de Paquetes**
 
 No hay de mi país, pero pongo uno cerca 
 
 Me pregunta por: 
 
-"Replica de debian"
+**Replica de debian**
 
 Lo dejo en la primer opción
 
@@ -128,33 +130,33 @@ Me pregunta por la proxy, dejo vacío y Continuo
 
 Y a esperar
 
-10H42
-
+**10H42**
 
 Me pregunta: 
 
-"popularity contest"
+**popularity contest**
 
 Le pongo que si
 
-"Selección de programas"
+**Selección de programas**
+
+## Eligiendo un Gestor / Entorno de Escritorio
 
 Desmarco las siguientes:
 
-"Entorno de escritorio Debian"
-". . . GNOME"
+**Entorno de escritorio Debian**-
+**. . . GNOME**
+**..y desmarco el resto**
 
-Pero ustedes pueden marcar alguna y se así ahorran tiempo de configuración
+Pero ustedes pueden marcar algun otro Gestor de Escritorio  y se así ahorran tiempo de configuración
 
 y dejo marcado:
 
-"Utilidades estándares del sistema"
+**Utilidades estándares del sistema**
 
-10h45
+**10h49**
 
-10h49
-
-"Instalando el cargador de arranque GRUB"
+**Instalando el cargador de arranque GRUB**
 
 Me pregunta:
 
@@ -165,9 +167,9 @@ Si arriba se indican todos sus sistemas operativos, puede instalar con seguridad
 No
 Si"
 
-Le pongo que: Si
+Le pongo que: **Si**
 
-Nota: Si por le pongo que no, no funcionará después pues no aparecerá  el Grub al reiniciar, pero eso se soluciona con el Live USB de MX Linux (sea de 32 o 64  bit según el que este usando) con la opción de "Reparar inicio" de las herramientas de MX Linux.
+>**Nota**: Si por le pongo que no, no funcionará después pues no aparecerá  el Grub al reiniciar, pero eso se soluciona con el Live USB de MX Linux (sea de 32 o 64  bit según el que este usando) con la opción de "Reparar inicio" de las herramientas de MX Linux.
 
 Luego me pregunta: 
 
@@ -182,21 +184,21 @@ Y aquí es donde necesito lo que anoté arriba:
 
 /dev/sdc
 
-En ese lo instalo 
+Lo selecciono ese y lo instalo
 
-"Terminar la instalación"
+**Terminar la instalación**
 
 Retiro el pendrive donde está Ventoy
 
-Y Continuar
+Y **Continuar**
 
-Se reinicia, boteo desde el pendrive del ordenador
+Se reinicia, booteo desde el pendrive del ordenador
 
-Ahorita reinicio y si puedo entrar, como no instalé ninguna interfaz gráfica ni la de debian mismo entonces solo aparece una terminal (no hay ninguna interfaz gráfica) que dice: 
+Ahorita reinicio y si puedo entrar, como no instalé ninguna interfaz gráfica ni la de debian mismo entonces solo aparece una terminal (no hay ninguna interfaz gráfica). La terminal que aparece dice: 
 
-"Debian/Linux 12 netinst tty1
+`Debian/Linux 12 netinst tty1`
 
-netinst login: _"
+`netinst login: _`
 
 allí poner el nombre de usuario, y luego dice: 
 
@@ -204,126 +206,154 @@ password:
 
 Ponga la contraseña de ese usuario y de Enter y aparece en mi caso: 
 
-wachin@netinst:^$
+`wachin@netinst:^$`
 
 ahora debemos escribir:
 
-$ su
-
-Nota: el signo $ de solo es para indicar que es la shell (la terminal donde estamos escribiendo).
+`s
 
 y poner la contraseña de superusuario (root) 
 
 ahora me aparece así: 
 
-root@netinst:/home/wachin#
+`root@netinst:/home/wachin#`
 
 y allí poner:
 
-$ apt update
+`apt update`
 
-11H10
+**11H10**
 
 luego instalar los programas necesarios, como yo no instale ningún Gestor de Ventanas debo instalar manualmente todos las parques para que un Sistema Operativo Linux funcione adecuadamente, enfocándome en KDE (pues eso es lo que quiero):
 
-apt install sudo adduser ucf kate kdenlive libreoffice default-jre accountsservice locate xdg-user-dirs xdg-user-dirs-gtk pkexec dbus-user-session udev kde-cli-tools dolphin kde-baseapps kate konsole synaptic polkit-kde-agent-1 pavucontrol paprefs xserver-xorg-input-multitouch exo-utils baobab network-manager network-manager-gnome firmware-linux-free firmware-misc-nonfree tree acpi quick-system-info-gui hardinfo memtest86+
+```
+apt install sudo adduser ucf kate kdenlive \
+    libreoffice default-jre accountsservice \
+    locate xdg-user-dirs xdg-user-dirs-gtk \
+    pkexec dbus-user-session udev kde-cli-tools \
+    dolphin kde-baseapps kate konsole synaptic \
+    polkit-kde-agent-1 pavucontrol paprefs \
+    xserver-xorg-input-multitouch exo-utils \
+    baobab network-manager network-manager-gnome \
+    firmware-linux-free firmware-misc-nonfree \
+    tree acpi quick-system-info-gui \
+    hardinfo memtest86+
+```
 
-MEMTEST
-Este paquete es para que en el Grub se genere el menú de el "Test de memoria" debe estar instalado el paquete:
+## Paquete Test de memoria
+Este paquete memtest86+ es para que en el Grub se genere el menú de el "Test de memoria" debe estar instalado el paquete:
 
 memtest86+
 
-
-GENERAR LOS LOCALES E INSTALAR EL ADMINISTRADOR DE INICIO DE SESIÓN
+# Generar los locales e instalar el Administrador de inicio de sesión
 Si usted desea usar más de un idioma en su sistema operativo y que este esté disponible en el administrador de inicio de sesión (Login Manager) debe configurarlo poniendo en la terminal (como usario root): 
 
-dpkg-reconfigure locales
+`dpkg-reconfigure locales`
 
 seleccione de la lista los que desea usar, en mi caso yo solo necesito además del español el inglés y lo selecciono y con TAB me ubico en Aceptar y doy Enter. A continuación elijo el idioma por defecto, en mi caso:
 
- es_EC.UTF-8
+`es_EC.UTF-8`
 
-luego instalo el Login Manager, yo usaré:
+luego instalo el Login Manager, yo usaré lxdm:
 
-lxdm
+`apt install lxdm`
 
-Nota: También se puede usar lightdm (MX Linux lo usa con lightdm-gtk-greeter)
+>**Nota**: También se puede usar lightdm (MX Linux lo usa con lightdm-gtk-greeter)
 
 al seguir este orden así, al reiniciar estarán disponibles los idiomas que hayamos generado (de lo contrario no)
 
-CONTROLADORES DEL TOUCHPAD DE LAPTOP DELL
+# CONTROLADORES DEL TOUCHPAD DE LAPTOP DELL
 El controlador del touchpad para Dell Inspiron 1750. En mi laptop Dell Inspiron 1750 no funciona el doble clic del touchpad en Debian 12 con el paquete:
 
-xserver-xorg-input-synaptics
+`xserver-xorg-input-synaptics`
 
 pero puedo instalarlo de todos modos, y ya lo arreglo después pues he hecho una solución en:
 
+**No funciona doble clic en Touchpad Dell Inspiron 1750 en Debian 12**
 https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html
 
 
-INSTALO PAQUETES alsa (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
-Estos me hacian falta para que el volumen en el mixer pnmixer apareciera activado al encender el ordenador, esto pues cuando yo lo encendía e iniciaba sesión el volumen del icono de pnmixer estaba silenciado y revisando el volumen estaba marcado como apagado, tenía que subirlo manualmente para escuchar algo, pero instalando lo siguiente ya funiona:
+# INSTALO PAQUETES alsa (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
+Estos me hacian falta para que el volumen en el mixer pnmixer apareciera activado al encender el ordenador, esto pues cuando yo lo encendía e iniciaba sesión el volumen del icono de pnmixer estaba silenciado y revisando el volumen estaba marcado como apagado, tenía que subirlo manualmente para escuchar algo, pero 
+instalando lo siguiente ya funiona:
 
-at install alsa-tools alsa-utils gstreamer1.0-alsa libatopology2 volumeicon-alsa
+```
+apt install alsa-tools alsa-utils gstreamer1.0-alsa \
+    libatopology2 volumeicon-alsa
+```
 
-También sospecho que estos paquetes me hacía falta instalar para que funcione QjackCtl con Pulseaudio (xq no me funcionaba)
+También sospecho que estos paquetes me hacía falta instalar para que funcione QjackCtl con Pulseaudio (porque no me funcionaba)
 
-INSTALO PAQUETES dbus (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
+# INSTALO PAQUETES dbus (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
 De la lista me faltaban por instalar:
 
-dbus-x11 xdg-dbus-proxy
+`dbus-x11 xdg-dbus-proxy`
 
 son importantes para el sistema, para la comunicación de aplicaciones entre si y el sistema operativo.
 
 
-LAS SIGUIENTES ES POSIBLE QUE YA SE HAYAN INSTALADO
+# LAS SIGUIENTES ES POSIBLE QUE YA SE HAYAN INSTALADO
 
-sudo apt install base-passwd passwd dmsetup
+`sudo apt install base-passwd passwd dmsetup`
 
 sirven para la gestión de usuarios y sus contraseñas
 
 
-DEPENDENCIAS PARA FLUXBOX
+# DEPENDENCIAS PARA FLUXBOX
 Instalo lo siguiente:
 
-apt-get install git fluxbox lxappearance lxrandr pnmixer numlockx xfce4-appfinder qt5ct nitrogen gnome-icon-theme frameworkintegration gxkb
+```
+apt-get install git fluxbox lxappearance lxrandr \
+    pnmixer numlockx xfce4-appfinder qt5ct \
+    nitrogen gnome-icon-theme frameworkintegration gxkb
+```
 
-
-Configurar Fluxbox 
+## Configurar Fluxbox 
 Yo voy a clonar mi Repositorio de Fluxbox e indicarle que se renombre a .fluxbox escribiendo a mano así en la terminal:
 
+
+```
 git clone https://github.com/wachin/RisenPC-Flux-Deb12-NetInstCD-KDE .Fluxbox
+```
 
 Y doy Enter, y reinicio en ordenador con el botón de reinicio o sino apagandolo y volviéndolo a encender, y ahora sí entro en la sesión de Fluxbox
 
 Si uno desea lanzar Synaptic desde root, poner:
-
+```
 su
-
+```
 y la contraseña, y poner: 
-
+```
 synaptic-pkexec
-
+```
 PARA INSTALAR EL ADMINISTRADOR DE ARCHIVOS DOLPHIN
 
+```
 sudo apt install dolphin kde-baseapps konsole kde-cli-tools \
      kio-extras kdegraphics-thumbnailers ffmpegthumbs ark \
      kde-style-oxygen-qt5 kde-style-qtcurve-qt5 breeze \
      papirus-icon-theme oxygen-icon-theme qt5-style-kvantum \
      usb.ids mtp-tools qdbus-qt5 qt5ct
+```
 
-APLICACIONES
+### APLICACIONES
 Y además estas aplicaciones:
 
-sudo apt install frameworkintegration chromium partitionmanager kdf qapt-deb-installer meld gwenview okular qps kompare pyzo screengrab gpick qbittorrent novelwriter keepassxc krusader catfish hardinfo2 xvkbd xfce4-notes
+```
+sudo apt install frameworkintegration chromium \
+    partitionmanager kdf qapt-deb-installer \
+    meld gwenview okular qps kompare pyzo \
+    screengrab gpick qbittorrent novelwriter \
+    keepassxc krusader catfish hardinfo2 \
+    xvkbd xfce4-notes
+```
 
-
-Username Is Not In The Sudoers File
+### Username Is Not In The Sudoers File
 
 Debemos arreglar el que no podemos usar sudo, para eso poner:
-
+```
 su -
-
+```
 Luego debe entender el siguiente ejemplo:
 
 usermod -aG sudo suusuario
@@ -333,9 +363,16 @@ porque debe de cambiar allí donde dice "usuario" por el suyo
 Si no sabe cuál es el nombre usuario, le explico que es el nombre que está a la izquierda de la @ en la terminal
 
 En mi caso tu pongo
-su -
-usermod -aG sudo wachin
 
+```
+su -
+```
+
+y luego:
+
+```
+usermod -aG sudo wachin
+```
 porque mi usuario es "wachin" (en su usuario debe ser otro)
 
 reiniciar
