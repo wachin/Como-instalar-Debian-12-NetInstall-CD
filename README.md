@@ -216,7 +216,7 @@ ahora debemos escribir:
 
 ```
 su
-``
+```
 
 y poner la contraseña de superusuario (root) 
 
@@ -345,6 +345,7 @@ Si uno desea lanzar Synaptic desde root, poner:
 su
 ```
 y la contraseña, y poner: 
+
 ```
 synaptic-pkexec
 ```
@@ -373,6 +374,7 @@ sudo apt install frameworkintegration chromium \
 ### Username Is Not In The Sudoers File
 
 Debemos arreglar el que no podemos usar sudo, para eso poner:
+
 ```
 su -
 ```
