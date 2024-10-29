@@ -160,12 +160,14 @@ y dejo marcado:
 
 Me pregunta:
 
+```
 "Se han detectado en el sistema los sistemas operativos mostrados a continuación: Windows Vista, MX 21.3
 Wildflower (21.3)
 Si arriba se indican todos sus sistemas operativos, puede instalar con seguridad el cargador de arranque en su unidad principal (en la partición UEFI o el registro de arranque). Cuando el ordenador arranque de nuevo podrá escoger iniciar cualquiera de esos sistemas operativos o su nuevo sistema.
 ¿Desea instalar el cargador de arranque GRUB en su unidad principal?
 No
 Si"
+```
 
 Le pongo que: **Si**
 
@@ -173,12 +175,14 @@ Le pongo que: **Si**
 
 Luego me pregunta: 
 
+```
 "Instalando el cargador de arranque GRUB Ahora debe configurar el sistema recién instalado para que sea arrancable, instalando para ello el cargador GRUB en un dispositivo del que se pueda arrancar. La forma habitual de hacerlo es instalar GRUB en su unidad principal (partición UEFI o registro principal de arranque). Si lo prefiere, puede instalar GRUB en cualquier otra unidad (o partición), o incluso en un medio removible.
 Dispositivo donde instalar el cargador de arranque:
 Introducir el dispositivo manualmente
 /dev/sda (ata-SAMSUNG_SP2504C_S09QJ1DP502191)
 /dev/sdb (usb-SanDisk Cruzer_Blade_04017921042721204743-0:0)
 /dev/sdc (usb-SanDisk_Cruzer_Force_4C530000230514216185-0:0)"
+```
 
 Y aquí es donde necesito lo que anoté arriba: 
 
