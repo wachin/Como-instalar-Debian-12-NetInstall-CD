@@ -1,1 +1,1 @@
-# C-mo-instalar-Debian-NetInstall-CD
+# Como-instalar-Debian-NetInstall-CD
