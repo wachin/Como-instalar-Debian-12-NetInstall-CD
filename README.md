@@ -238,7 +238,8 @@ apt update
 
 **11H10**
 
-luego instalar los programas necesarios, como yo no instale ningún Gestor de Ventanas debo instalar manualmente todos las parques para que un Sistema Operativo Linux funcione adecuadamente, enfocándome en KDE (pues eso es lo que quiero):
+## Instalando programas necesarios
+luego instalar los programas necesarios, como yo no instale ningún Gestor de Ventanas debo instalar manualmente todos los paquetes para que un Sistema Operativo Linux funcione adecuadamente, enfocándome en KDE (pues eso es lo que quiero):
 
 ```
 apt install sudo adduser ucf kate kdenlive \
@@ -251,7 +252,7 @@ apt install sudo adduser ucf kate kdenlive \
     baobab network-manager network-manager-gnome \
     firmware-linux-free firmware-misc-nonfree \
     tree acpi quick-system-info-gui \
-    hardinfo memtest86+
+    hardinfo memtest86+ syslinux disk-manager
 ```
 
 ## Paquete Test de memoria
