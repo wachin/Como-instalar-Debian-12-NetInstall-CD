@@ -417,13 +417,12 @@ eso es para que aparezcan las carpetas: Descargas, Música, Video y otras
 
 # OTRAS APLICACIONES
 
-Faltan por instalar algunas cosas del sistema, en synaptic marcar para instalar:
+Faltan por instalar algunas cosas del sistema, en synaptic marcar para instalar cups para la impresora:
 
 cups
 colord
 kcalc
 ktimer
-lynx
 print-manager
 sane-utils
 sweeper
@@ -438,14 +437,33 @@ sudo apt install gcc dkms
 ```
 Ejemplo yo he compilado unos Kernel personalizados y es necesario estos paquetes para poderlos instalar.
 
+# Instalar todos los firmware
+MX Linux viene con muchos paquetes de firmware, con esos funcionará e Linux en cualquier ordenador, instalar así:
+```
+sudo apt install amd64-microcode atmel-firmware b43-fwcutter \
+	bluez-firmware firmware-amd-graphics firmware-ath9k-htc \
+	firmware-atheros firmware-b43-installer \
+	firmware-b43legacy-installer firmware-bnx2 firmware-bnx2x \
+	firmware-brcm80211 firmware-intel-sound firmware-ipw2x00 \
+	firmware-iwlwifi firmware-libertas firmware-linux \
+	firmware-linux-free firmware-linux-nonfree \
+	firmware-misc-nonfree firmware-myricom firmware-netxen \
+	firmware-qlogic firmware-realtek firmware-sof-signed \
+	firmware-zd1211 intel-microcode mx-debian-firmware
+```
+
+Fuente:
+
+**Firmware instalado en MX Linux 23 de 32 bits desde Debian 12**  
+[https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html](https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html)
 
 # CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
-Para instalar el controlador del Wi-Fi para esta laptop Dell Inspiron 1750 que tiene un controlador privativo sigo las siguientes instrucciones:
+El siguiente paquete ya está instalado en el paso anterior, solo lo comento pues es para instalar el controlador del Wi-Fi para esta laptop Dell Inspiron 1750 que tiene un controlador privativo:
 
 **Cómo instalar el controlador del Wi-Fi en Debian 11, 12 KDE (ejemplo para mi Laptop Dell Inspiron 1750)**  
 https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html
 
-para mí laptop instalo broadcom:
+para mí laptop que tiene el driver broadcom:
 
 firmware-b43-installer
 
@@ -453,10 +471,10 @@ Cierro sesión y vuelvo a entrar y ya funciona
 
 
 # CÓMO ARREGLAR EL TOUCHPAD DE MI LAPTOP DELL INSPIRON EN DEBIAN 12
-Sigo estas  instrucciones:
+En Debian 12 el touchpad de mi laptop Dell Inspiron 1750 tiene un problema, para arreglarlo sigo estas instrucciones:
 
-**No funciona el Touchpad de mi laptop Dell Inspiron 1750 en Q4OS 4 Gemini**  
-https://facilitarelsoftwarelibre.blogspot.com/2023/11/blog-post_12.html
+**Doble clic en Touchpad Dell inspiron 1750 no funciona en Debian 12**
+[https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html)
 
 
 # PROGRAMAS DE PYTHON
@@ -485,14 +503,14 @@ xdg-dbus-proxy
 
 pero no descarto instalarlos después si los necesite.
 
-Los siguientes paquetes no son necesarios:
+Los siguientes paquetes no son necesarios para mi en esta instalación:
 
 gvfs  
 gvfs-common  
 gvfs-daemons  
 gvfs-libs
 
-porque solo voy a usar Dolphin como administrador de archivos:
+porque solo voy a usar Dolphin como administrador de archivos, no voy a usar Nemo, Caja, Nautilus, Thunar, PCmanFM, vea:
 
 **Instalar correctamente Dolphin (Administrador de archivos) en MX Linux, antiX basados en Debian en entornos no KDE (tal vez basados en Ubuntu también)**  
 https://facilitarelsoftwarelibre.blogspot.com/2019/11/instalar-correctamente-dolphin-en-entornos-no-kde.html
