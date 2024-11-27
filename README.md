@@ -2,17 +2,17 @@
 
 Diríjase a la siguiente dirección donde en el 2024 está Debian 12 bookworm y allí busque Netinstall CD
 
-https://www.debian.org/CD/netinst/
+[https://www.debian.org/CD/netinst/](https://www.debian.org/CD/netinst/)
 
 Como este tutorial está hecho con la versión Debian 12 bookworm alternativamente puede entrar en (y buscar Netinstall CD: 
 
-https://www.debian.org/releases/bookworm/debian-installer/
+[https://www.debian.org/releases/bookworm/debian-installer/](https://www.debian.org/releases/bookworm/debian-installer/)
 
 ## Ventoy para Bootear Debian
 Después de descargada la ISO la puse en un pendrive en Ventoy, vea el siguiente tutorial: 
 
 **Creando pendrive USB Multiboot con Ventoy desde Linux**  
-https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html
+[https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html)
 
 luego encendí el ordenador y lo arranqué desde el USB (que yo ya lo tenía preconfigurado para eso), y lo conecté al cable de red para que en el proceso de instalación se descarguen más rápido los paquetes
 
@@ -76,7 +76,8 @@ Le pongo:
 
 Y Elijo el disco a particionar
 
-Usted puede elegir el Disco de su ordenador, yo elegiré mi Pendrive pues lo voy a instalar allí para usarlo en varios ordenadores
+# Yo elegiré crear un Pendrive Linux Portable
+Usted si desea puede elegir el Disco de su ordenador para que lo instale allí, yo elegiré mi Pendrive pues lo voy a instalar allí para usarlo en varios ordenadores
 
 Siguiente, elijo: 
 
@@ -451,6 +452,12 @@ sudo apt install amd64-microcode atmel-firmware b43-fwcutter \
 	firmware-qlogic firmware-realtek firmware-sof-signed \
 	firmware-zd1211 intel-microcode mx-debian-firmware
 ```
+
+# Pendrive Linux Portable testeado en
+He probado este Pendrive con Linux Debian 12 de 32 bit Portable instalado allí en:
+
+- Laptop Dell Inspiron 1750
+- PC de escritorio armada con una motheboard Pavilion m7794.de-a del 2008 que me regaló mi primo Paco, en esta, si no se instalan todos los Firmwares en algún momento se colgaba, en contraste 
 
 Fuente:
 
