@@ -76,8 +76,8 @@ Le pongo:
 
 Y Elijo el disco a particionar
 
-# Yo elegiré crear un Pendrive Linux Portable
-Usted si desea puede elegir el Disco de su ordenador para que lo instale allí, yo elegiré mi Pendrive pues lo voy a instalar allí para usarlo en varios ordenadores
+# Instalar en el Disco del ordenador
+Elija el Disco de su ordenador para que lo instale allí
 
 Siguiente, elijo: 
 
@@ -97,9 +97,7 @@ Me pregunta:
 
 debo ver bien en cuál unidad lo estoy instalando, pues como lo estoy instalando en un pendrive veo que es: 
 
-/dev/sdc
-
->**Nota**: Ese sdc puede variar.
+/dev/sda
 
 eso lo necesito saber para el final cuando pide instalar el grub, así que lo anoto en un papel
 
@@ -109,7 +107,7 @@ Y continuo
 
 Y dice: 
 
-**Instanlado el sistema base**
+**Instanlado el sistema base y otros**
 
 A las **10H05** empieza la instalación
 
@@ -143,250 +141,39 @@ Le pongo que si
 
 ## Eligiendo un Gestor / Entorno de Escritorio
 
-Desmarco las siguientes:
+Si dejan como está:
 
 **Entorno de escritorio Debian**-
 **. . . GNOME**
-**..y desmarco el resto**
 
-Pero ustedes pueden marcar algun otro Gestor de Escritorio  y se así ahorran tiempo de configuración
+se instalará GNOME, pero si los desmarcan esos dos y marcan alguno de los otros se instalará aquel que elijan
 
-y dejo marcado:
+yo he estado probando:
 
-**Utilidades estándares del sistema**
+LXDE
+LXQT
+KDE
+
+estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este, y sino pues LXQT
+
+Pero ustedes pueden marcar algun Gestor de Escritorio que quieran
 
 **10h49**
 
-**Instalando el cargador de arranque GRUB**
-
-Me pregunta:
-
-```
-"Se han detectado en el sistema los sistemas operativos mostrados a continuación: Windows Vista, MX 21.3
-Wildflower (21.3)
-Si arriba se indican todos sus sistemas operativos, puede instalar con seguridad el cargador de arranque en su unidad principal (en la partición UEFI o el registro de arranque). Cuando el ordenador arranque de nuevo podrá escoger iniciar cualquiera de esos sistemas operativos o su nuevo sistema.
-¿Desea instalar el cargador de arranque GRUB en su unidad principal?
-No
-Si"
-```
-
-Le pongo que: **Si**
-
->**Nota**: Si por le pongo que no, no funcionará después pues no aparecerá  el Grub al reiniciar, pero eso se soluciona con el Live USB de MX Linux (sea de 32 o 64  bit según el que este usando) con la opción de "Reparar inicio" de las herramientas de MX Linux.
-
-Luego me pregunta: 
-
-```
-"Instalando el cargador de arranque GRUB Ahora debe configurar el sistema recién instalado para que sea arrancable, instalando para ello el cargador GRUB en un dispositivo del que se pueda arrancar. La forma habitual de hacerlo es instalar GRUB en su unidad principal (partición UEFI o registro principal de arranque). Si lo prefiere, puede instalar GRUB en cualquier otra unidad (o partición), o incluso en un medio removible.
-Dispositivo donde instalar el cargador de arranque:
-Introducir el dispositivo manualmente
-/dev/sda (ata-SAMSUNG_SP2504C_S09QJ1DP502191)
-/dev/sdb (usb-SanDisk Cruzer_Blade_04017921042721204743-0:0)
-/dev/sdc (usb-SanDisk_Cruzer_Force_4C530000230514216185-0:0)"
-```
-
-Y aquí es donde necesito lo que anoté arriba: 
-
-/dev/sdc
-
-Lo selecciono ese y lo instalo
-
-**Terminar la instalación**
-
-Retiro el pendrive donde está Ventoy
-
-Y **Continuar**
-
-Se reinicia, booteo desde el pendrive del ordenador
-
-Ahorita reinicio y si puedo entrar, como no instalé ninguna interfaz gráfica ni la de debian mismo entonces solo aparece una terminal (no hay ninguna interfaz gráfica). La terminal que aparece dice: 
-
-```
-Debian/Linux 12 netinst tty1`
-
-netinst login: _
-```
-
-allí poner el nombre de usuario, y luego dice: 
-
-password:
-
-Ponga la contraseña de ese usuario y de Enter y aparece en mi caso: 
-
-```
-wachin@netinst:^$
-```
-
-ahora debemos escribir:
-
-```
-su
-```
-
-y poner la contraseña de superusuario (root) 
-
-ahora me aparece así: 
-
-```
-root@netinst:/home/wachin#
-```
-
-y allí poner:
-
-```
-apt update
-```
-
-**11H10**
-
-## Instalando programas necesarios
-luego instalar los programas necesarios, como yo no instale ningún Gestor de Ventanas debo instalar manualmente todos los paquetes para que un Sistema Operativo Linux funcione adecuadamente, enfocándome en KDE (pues eso es lo que quiero):
-
-```
-apt install sudo adduser ucf kate kdenlive \
-    libreoffice default-jre accountsservice \
-    locate xdg-user-dirs xdg-user-dirs-gtk \
-    pkexec dbus-user-session udev kde-cli-tools \
-    dolphin kde-baseapps kate konsole synaptic \
-    polkit-kde-agent-1 pavucontrol paprefs \
-    xserver-xorg-input-multitouch exo-utils \
-    baobab network-manager network-manager-gnome \
-    firmware-linux-free firmware-misc-nonfree \
-    tree acpi quick-system-info-gui \
-    hardinfo memtest86+ syslinux disk-manager
-```
-
-## Paquete Test de memoria
-Este paquete memtest86+ es para que en el Grub se genere el menú de el "Test de memoria" debe estar instalado el paquete:
-
-memtest86+
-
-# Generar los locales e instalar el Administrador de inicio de sesión
-Si usted desea usar más de un idioma en su sistema operativo y que este esté disponible en el administrador de inicio de sesión (Login Manager) debe configurarlo poniendo en la terminal (como usario root): 
-
-```
-dpkg-reconfigure locales
-```
-
-seleccione de la lista los que desea usar, en mi caso yo solo necesito además del español el inglés y lo selecciono y con TAB me ubico en Aceptar y doy Enter. A continuación elijo el idioma por defecto, en mi caso:
-
-```
-es_EC.UTF-8
-```
-
-luego instalo el Login Manager, yo usaré lxdm:
-
-```
-apt install lxdm
-```
-
->**Nota**: También se puede usar lightdm (MX Linux lo usa con lightdm-gtk-greeter)
-
-al seguir este orden así, al reiniciar estarán disponibles los idiomas que hayamos generado (de lo contrario no)
-
-# CONTROLADORES DEL TOUCHPAD DE LAPTOP DELL
-El controlador del touchpad para Dell Inspiron 1750. En mi laptop Dell Inspiron 1750 no funciona el doble clic del touchpad en Debian 12 con el paquete:
-
-```
-xserver-xorg-input-synaptics
-```
-
-pero puedo instalarlo de todos modos, y ya lo arreglo después pues he hecho una solución en:
-
-**No funciona doble clic en Touchpad Dell Inspiron 1750 en Debian 12**  
-https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html
-
-
-# INSTALO PAQUETES alsa (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
-Estos me hacian falta para que el volumen en el mixer pnmixer apareciera activado al encender el ordenador, esto pues cuando yo lo encendía e iniciaba sesión el volumen del icono de pnmixer estaba silenciado y revisando el volumen estaba marcado como apagado, tenía que subirlo manualmente para escuchar algo, pero 
-instalando lo siguiente ya funiona:
-
-```
-apt install alsa-tools alsa-utils gstreamer1.0-alsa \
-    libatopology2 volumeicon-alsa
-```
-
-También sospecho que estos paquetes me hacía falta instalar para que funcione QjackCtl con Pulseaudio (porque no me funcionaba)
-
-# INSTALO PAQUETES dbus (ESTA PALABRA BUSCADA EN SYNAPTIC) PRESENTES EN MX LINUX 21 DE 32 BIT
-De la lista me faltaban por instalar:
-
-```
-dbus-x11 xdg-dbus-proxy
-```
-
-son importantes para el sistema, para la comunicación de aplicaciones entre si y el sistema operativo.
-
-
-# LAS SIGUIENTES ES POSIBLE QUE YA SE HAYAN INSTALADO
-
-```
-sudo apt install base-passwd passwd dmsetup
-```
-
-sirven para la gestión de usuarios y sus contraseñas
-
-
-# DEPENDENCIAS PARA FLUXBOX
-Instalo lo siguiente:
-
-```
-apt-get install git fluxbox lxappearance lxrandr \
-    pnmixer numlockx xfce4-appfinder qt5ct \
-    nitrogen gnome-icon-theme frameworkintegration gxkb
-```
-
-## Configurar Fluxbox 
-Yo voy a clonar mi Repositorio de Fluxbox e indicarle que se renombre a .fluxbox escribiendo a mano así en la terminal:
-
-
-```
-git clone https://github.com/wachin/RisenPC-Flux-Deb12-NetInstCD-KDE .Fluxbox
-```
-
-Y doy Enter, y reinicio en ordenador con el botón de reinicio o sino apagandolo y volviéndolo a encender, y ahora sí entro en la sesión de Fluxbox
-
-Si uno desea lanzar Synaptic desde root, poner:
-```
-su
-```
-y la contraseña, y poner: 
-
-```
-synaptic-pkexec
-```
-PARA INSTALAR EL ADMINISTRADOR DE ARCHIVOS DOLPHIN
-
-```
-sudo apt install dolphin kde-baseapps konsole kde-cli-tools \
-     kio-extras kdegraphics-thumbnailers ffmpegthumbs ark \
-     kde-style-oxygen-qt5 kde-style-qtcurve-qt5 breeze \
-     papirus-icon-theme oxygen-icon-theme qt5-style-kvantum \
-     usb.ids mtp-tools qdbus-qt5 qt5ct
-```
-
-### APLICACIONES
-Y además estas aplicaciones:
-
-```
-sudo apt install frameworkintegration chromium \
-    partitionmanager kdf qapt-deb-installer \
-    meld gwenview okular qps kompare pyzo \
-    screengrab gpick qbittorrent novelwriter \
-    keepassxc krusader catfish hardinfo2 \
-    xvkbd xfce4-notes
-```
+digan las instrucciones y luego que se instala, saquen el pendrive y reinicien
 
 ### Username Is Not In The Sudoers File
 
-Debemos arreglar el que no podemos usar sudo, para eso poner:
+Al entrar debemos arreglar el que no podemos usar sudo, para eso poner:
 
-```
+```bash
 su -
 ```
 Luego debe entender el siguiente ejemplo:
 
+```bash
 usermod -aG sudo suusuario
+```
 
 porque debe de cambiar allí donde dice "usuario" por el suyo
 
@@ -394,13 +181,13 @@ Si no sabe cuál es el nombre usuario, le explico que es el nombre que está a l
 
 En mi caso tu pongo
 
-```
+```bash
 su -
 ```
 
 y luego:
 
-```
+```bash
 usermod -aG sudo wachin
 ```
 porque mi usuario es "wachin" (en su usuario debe ser otro)
@@ -409,63 +196,13 @@ porque mi usuario es "wachin" (en su usuario debe ser otro)
 
 y reinicio
 
-Ejecutar la herramientas del sistema: 
-
-`xdg-user-dirs-update`
-
-eso es para que aparezcan las carpetas: Descargas, Música, Video y otras
-
 
 # OTRAS APLICACIONES
 
 Faltan por instalar algunas cosas del sistema, en synaptic marcar para instalar cups para la impresora:
 
-cups
-colord
-kcalc
-ktimer
-print-manager
-sane-utils
-sweeper
-kcharselect
-ipp-usb
-
-
-# DEPENDENCIAS PARA OTROS KERNEL 
-Para instalar otros kernel:
-```
-sudo apt install gcc dkms
-```
-Ejemplo yo he compilado unos Kernel personalizados y es necesario estos paquetes para poderlos instalar.
-
-# Instalar todos los firmware
-MX Linux viene con muchos paquetes de firmware, con esos funcionará e Linux en cualquier ordenador, instalar así:
-```
-sudo apt install amd64-microcode atmel-firmware b43-fwcutter \
-	bluez-firmware firmware-amd-graphics firmware-ath9k-htc \
-	firmware-atheros firmware-b43-installer \
-	firmware-b43legacy-installer firmware-bnx2 firmware-bnx2x \
-	firmware-brcm80211 firmware-intel-sound firmware-ipw2x00 \
-	firmware-iwlwifi firmware-libertas firmware-linux \
-	firmware-linux-free firmware-linux-nonfree \
-	firmware-misc-nonfree firmware-myricom firmware-netxen \
-	firmware-qlogic firmware-realtek firmware-sof-signed \
-	firmware-zd1211 intel-microcode mx-debian-firmware
-```
-
-# Pendrive Linux Portable testeado en
-He probado este Pendrive con Linux Debian 12 de 32 bit Portable instalado allí en:
-
-- Laptop Dell Inspiron 1750
-- PC de escritorio armada con una motheboard Pavilion m7794.de-a del 2008 que me regaló mi primo Paco, en esta, si no se instalan todos los Firmwares en algún momento se colgaba, en contraste 
-
-Fuente:
-
-**Firmware instalado en MX Linux 23 de 32 bits desde Debian 12**  
-[https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html](https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html)
-
 # CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
-El siguiente paquete ya está instalado en el paso anterior, solo lo comento pues es para instalar el controlador del Wi-Fi para esta laptop Dell Inspiron 1750 que tiene un controlador privativo:
+Tengo una laptop Dell Inspiron 1750 que tiene un controlador privativo, aquí dejo un tutorial de cómo lo pude solucionar:
 
 **Cómo instalar el controlador del Wi-Fi en Debian 11, 12 KDE (ejemplo para mi Laptop Dell Inspiron 1750)**  
 https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html
@@ -483,43 +220,5 @@ En Debian 12 el touchpad de mi laptop Dell Inspiron 1750 tiene un problema, para
 **Doble clic en Touchpad Dell inspiron 1750 no funciona en Debian 12**
 [https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/no-funciona-doble-clic-en-touchpad-dell-inspiron-1750-en-debian-12.html)
 
-
-# PROGRAMAS DE PYTHON
-Para que funcionen algunos programas de python pueden instalarse los siguientes paquetes:
-
-```
-sudo apt install python3-brotli python3-bs4 \
-    python3-cairo python3-certifi python3-chardet \
-    python3-cups python3-cupshelpers python3-dbus \
-    python3-distro python3-gi python3-html5lib \
-    python3-lxml python3-mutagen python3-packaging \
-    python3-ply python3-pycryptodome python3-pyqt5 \
-    python3-pyqt5.sip python3-pyxattr python3-sip \
-    python3-sipbuild python3-six python3-smbc \
-    python3-soupsieve python3-toml \
-    python3-webencodings python3-websockets \
-    python3-xdg
-```
-
-# PROGRAMAS NO USADOS EN ESTÁ INSTALACIÓN
-No creo tener la necesidad de instalar lo siguiente:
-
-xdg-document-portal
-xdg-desktop-portal-gtk
-xdg-dbus-proxy
-
-pero no descarto instalarlos después si los necesite.
-
-Los siguientes paquetes no son necesarios para mi en esta instalación:
-
-gvfs  
-gvfs-common  
-gvfs-daemons  
-gvfs-libs
-
-porque solo voy a usar Dolphin como administrador de archivos, no voy a usar Nemo, Caja, Nautilus, Thunar, PCmanFM, vea:
-
-**Instalar correctamente Dolphin (Administrador de archivos) en MX Linux, antiX basados en Debian en entornos no KDE (tal vez basados en Ubuntu también)**  
-https://facilitarelsoftwarelibre.blogspot.com/2019/11/instalar-correctamente-dolphin-en-entornos-no-kde.html
 
 Dios los bendiga
