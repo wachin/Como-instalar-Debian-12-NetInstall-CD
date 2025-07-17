@@ -196,16 +196,16 @@ porque mi usuario es "wachin" (en su usuario debe ser otro)
 
 y reinicio
 
+También es posible necesitar:
 
-# OTRAS APLICACIONES
+### Instalé Debian 12 Netinstall con LXQT pero en la Laptop Dell Inspiron 14 3481 no puedo regular el Brillo con teclas F11 o F12  
+[https://facilitarelsoftwarelibre.blogspot.com/2025/07/teclas-f-de-brillo-en-laptop-no-funcionan-en-debian-12-netinstall-cd.html](https://facilitarelsoftwarelibre.blogspot.com/2025/07/teclas-f-de-brillo-en-laptop-no-funcionan-en-debian-12-netinstall-cd.html)
 
-Faltan por instalar algunas cosas del sistema, en synaptic marcar para instalar cups para la impresora:
-
-# CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
+### CÓMO INSTALAR EL CONTROLADOR DE WI-FI EN ORDENADORES EN QUE FALTA EL DRIVER POR SER PRIVATIVO
 Tengo una laptop Dell Inspiron 1750 que tiene un controlador privativo, aquí dejo un tutorial de cómo lo pude solucionar:
 
 **Cómo instalar el controlador del Wi-Fi en Debian 11, 12 KDE (ejemplo para mi Laptop Dell Inspiron 1750)**  
-https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html
+[https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html](https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-instalar-controlador-privativo-del-wi-fi-en-debian.html)
 
 para mí laptop que tiene el driver broadcom:
 
