@@ -60,7 +60,7 @@ Luego:
 
 **Nombre de usuario y contraseña**
 
-o sea la contraseña del usuario normal, no la de root. Cada usuario debe tener su propia contraseña
+o sea la contraseña del usuario normal (no la de root). Cada usuario debe tener su propia contraseña
 
 Luego la 
 
@@ -70,7 +70,7 @@ Y en:
 
 **Particionado e discos**
 
-Le pongo:
+Aquí hay una situación, se puede usar todo el disco pero se borrará todo lo que esté en el Disco de Almacenamiento (HDD, SSD, NVM, u otro). En mi caso voy a usar todo el disco (luego haré otra explicación para instalar junto a Windows), le pongo:
 
 **Guiado - utilizar todo el disco**
 
@@ -95,7 +95,7 @@ Me pregunta:
 
 **"Desea escribir . . . "**
 
-debo ver bien en cuál unidad lo estoy instalando, pues como lo estoy instalando en un pendrive veo que es: 
+debo ver bien en cuál unidad lo estoy instalando, debe ser en: 
 
 /dev/sda
 
@@ -135,7 +135,7 @@ Me pregunta:
 
 **popularity contest**
 
-Le pongo que si
+Le pongo que si (usted si desea puede poner que no)
 
 **Selección de programas**
 
@@ -150,11 +150,12 @@ se instalará GNOME, pero si los desmarcan esos dos y marcan alguno de los otros
 
 yo he estado probando:
 
-LXDE
-LXQT
-KDE
+- XFCE  
+- LXDE  
+- LXQT  
+- KDE  
 
-estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este, y sino pues LXQT
+estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este, y sino pues LXQT o XFCE
 
 Pero ustedes pueden marcar algun Gestor de Escritorio que quieran
 
@@ -175,11 +176,11 @@ Luego debe entender el siguiente ejemplo:
 usermod -aG sudo suusuario
 ```
 
-porque debe de cambiar allí donde dice "usuario" por el suyo
+porque debe de cambiar allí donde dice "suusuario" por el suyo
 
 Si no sabe cuál es el nombre usuario, le explico que es el nombre que está a la izquierda de la @ en la terminal
 
-En mi caso tu pongo
+En mi caso yu pongo
 
 ```bash
 su -
