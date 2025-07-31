@@ -146,6 +146,8 @@ Si dejan como está:
 **Entorno de escritorio Debian**-
 **. . . GNOME**
 
+![08 Selección de programas, Por defecto Entorno Debian y GNOME](vx_images/358016985706259.png)
+
 se instalará GNOME, pero si los desmarcan esos dos y marcan alguno de los otros se instalará aquel que elijan
 
 yo he estado probando:
@@ -154,7 +156,9 @@ LXDE
 LXQT
 KDE
 
-estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este, y sino pues LXQT
+estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este porque es muy competo, y sino pues LXQT que está hecho en Qt donde funciona bien ksnip y además ya trae instaladas muchas dependencias para Kdenlive, Dolphin:
+
+![09 Cómo hacer espacio en Windows 10 para instalar Debian 12 Netinst CD LXQT-f054644](vx_images/590455784965499.png)
 
 Pero ustedes pueden marcar algun Gestor de Escritorio que quieran
 
@@ -196,7 +200,11 @@ porque mi usuario es "wachin" (en su usuario debe ser otro)
 
 y reinicio
 
-También es posible necesitar:
+También necesitarán:
+
+**En Debian no viene activado el repositorio non-free, ni contrib, activalos**  
+[https://facilitarelsoftwarelibre.blogspot.com/2025/07/en-debian-no-viene-activado-repositorio-non-free-ni-contrib.html](https://facilitarelsoftwarelibre.blogspot.com/2025/07/en-debian-no-viene-activado-repositorio-non-free-ni-contrib.html)  
+
 
 ### Instalé Debian 12 Netinstall con LXQT pero en la Laptop Dell Inspiron 14 3481 no puedo regular el Brillo con teclas F11 o F12  
 [https://facilitarelsoftwarelibre.blogspot.com/2025/07/teclas-f-de-brillo-en-laptop-no-funcionan-en-debian-12-netinstall-cd.html](https://facilitarelsoftwarelibre.blogspot.com/2025/07/teclas-f-de-brillo-en-laptop-no-funcionan-en-debian-12-netinstall-cd.html)
