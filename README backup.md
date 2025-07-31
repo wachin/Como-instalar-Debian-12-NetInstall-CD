@@ -60,7 +60,7 @@ Luego:
 
 **Nombre de usuario y contraseña**
 
-o sea la contraseña del usuario normal (no la de root). Cada usuario debe tener su propia contraseña
+o sea la contraseña del usuario normal, no la de root. Cada usuario debe tener su propia contraseña
 
 Luego la 
 
@@ -70,7 +70,7 @@ Y en:
 
 **Particionado e discos**
 
-Aquí hay una situación, se puede usar todo el disco pero se borrará todo lo que esté en el Disco de Almacenamiento (HDD, SSD, NVM, u otro). En mi caso voy a usar todo el disco (luego haré otra explicación para instalar junto a Windows), le pongo:
+Le pongo:
 
 **Guiado - utilizar todo el disco**
 
@@ -95,7 +95,7 @@ Me pregunta:
 
 **"Desea escribir . . . "**
 
-debo ver bien en cuál unidad lo estoy instalando, debe ser en: 
+debo ver bien en cuál unidad lo estoy instalando, pues como lo estoy instalando en un pendrive veo que es: 
 
 /dev/sda
 
@@ -135,7 +135,7 @@ Me pregunta:
 
 **popularity contest**
 
-Le pongo que si (usted si desea puede poner que no)
+Le pongo que si
 
 **Selección de programas**
 
@@ -152,69 +152,19 @@ se instalará GNOME, pero si los desmarcan esos dos y marcan alguno de los otros
 
 yo he estado probando:
 
-- XFCE  
-- LXDE  
-- LXQT  
-- KDE  
+LXDE
+LXQT
+KDE
 
-<<<<<<< HEAD
 estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este porque es muy competo, y sino pues LXQT que está hecho en Qt donde funciona bien ksnip y además ya trae instaladas muchas dependencias para Kdenlive, Dolphin:
 
 ![09 Cómo hacer espacio en Windows 10 para instalar Debian 12 Netinst CD LXQT-f054644](vx_images/590455784965499.png)
-=======
-estos tres me parecen muy interesantes, de estos KDE usa más recursos pero si los tuviera el ordenador preferible para mi este, y sino pues LXQT o XFCE
->>>>>>> refs/remotes/origin/main
 
 Pero ustedes pueden marcar algun Gestor de Escritorio que quieran
 
-yo dejo marcado:
-
-"Utilidades estándares del sistema"
-
-y elijo
-
-XFCE
-
-10h45
-
-10h49
-
-**"Instalando el cargador de arranque GRUB"**
-
-Me pregunta:
-
-"Se han detectado en el sistema los sistemas operativos mostrados a continuación: Windows Vista, MX 21.3
-Wildflower (21.3)
-Si arriba se indican todos sus sistemas operativos, puede instalar con seguridad el cargador de arranque en su unidad principal (en la partición UEFI o el registro de arranque). Cuando el ordenador arranque de nuevo podrá escoger iniciar cualquiera de esos sistemas operativos o su nuevo sistema.
-¿Desea instalar el cargador de arranque GRUB en su unidad principal?
-No
-Si"
-
-Le pongo que: Si
-
-**Nota:** Si por le pongo que no, no funcionará después pues no aparecerá  el Grub al reiniciar, pero eso se soluciona con el Live USB de MX Linux (sea de 32 o 64  bit según el que este usando) con la opción de "Reparar inicio" de las herramientas de MX Linux.
-
-Luego me pregunta: 
-
-"Instalando el cargador de arranque GRUB Ahora debe configurar el sistema recién instalado para que sea arrancable, instalando para ello el cargador GRUB en un dispositivo del que se pueda arrancar. La forma habitual de hacerlo es instalar GRUB en su unidad principal (partición UEFI o registro principal de arranque). Si lo prefiere, puede instalar GRUB en cualquier otra unidad (o partición), o incluso en un medio removible.
-Dispositivo donde instalar el cargador de arranque:
-Introducir el dispositivo manualmente
-/dev/sda (ata-SAMSUNG_SP2504C_S09QJ1DP502191)
-/dev/sdb (usb-SanDisk Cruzer_Blade_04017921042721204743-0:0)
-
-Y aquí es donde necesito lo que anoté arriba: 
-
-/dev/sda
-
-En ese lo instalo, siempre **sda** es el disco de almacenamiento del ordenador o laptop
-
-"Terminar la instalación"
-
-**Reinicio**, Retiro el pendrive donde está Ventoy
-
-Y entro y continuar
-
 **10h49**
+
+digan las instrucciones y luego que se instala, saquen el pendrive y reinicien
 
 ### Username Is Not In The Sudoers File
 
@@ -229,11 +179,11 @@ Luego debe entender el siguiente ejemplo:
 usermod -aG sudo suusuario
 ```
 
-porque debe de cambiar allí donde dice "suusuario" por el suyo
+porque debe de cambiar allí donde dice "usuario" por el suyo
 
 Si no sabe cuál es el nombre usuario, le explico que es el nombre que está a la izquierda de la @ en la terminal
 
-En mi caso yu pongo
+En mi caso tu pongo
 
 ```bash
 su -
@@ -248,7 +198,7 @@ porque mi usuario es "wachin" (en su usuario debe ser otro)
 
 **reiniciar**
 
-y reinicio, pues así ya puedo usar el Linux como siempre lo he usado en Ubuntu, MX Linux. Y explico que, en debian aparece el mensaje "El nombre de usuario no está en el archivo sudoers" por cosas de los usuarios avanzados de Debian, ellos entrar en root con "su -" y poner la contraseña de superusuario root y desde allí trabajar directamente.
+y reinicio
 
 También necesitarán:
 
